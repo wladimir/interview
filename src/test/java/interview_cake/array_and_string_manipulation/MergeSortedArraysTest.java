@@ -3,10 +3,10 @@ package interview_cake.array_and_string_manipulation;
 import common.Triplet;
 import junit.framework.TestCase;
 
-import java.util.Arrays;
 import java.util.List;
 
 import static java.util.Arrays.asList;
+import static org.junit.Assert.assertArrayEquals;
 
 public class MergeSortedArraysTest extends TestCase {
     public void testMerge() {
@@ -27,10 +27,6 @@ public class MergeSortedArraysTest extends TestCase {
                         new int[]{1, 2, 3, 4, 5, 6}
                 )
         );
-        result.forEach(t -> assertTrue(
-                Arrays.equals(
-                        t.c,
-                        new MergeSortedArrays().merge(t.a, t.b))
-        ));
+        result.forEach(t -> assertArrayEquals(t.c, new MergeSortedArrays().merge(t.a, t.b)));
     }
 }
