@@ -1,8 +1,7 @@
-package interview_cake.array_and_string_manipulation;
+package interviewcake.array_and_string;
 
 import common.Pair;
 import junit.framework.TestCase;
-import org.junit.Test;
 
 import java.util.List;
 

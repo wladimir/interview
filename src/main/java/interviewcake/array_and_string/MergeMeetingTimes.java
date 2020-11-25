@@ -1,4 +1,4 @@
-package interview_cake.array_and_string_manipulation;
+package interviewcake.array_and_string;
 
 import java.util.*;
 
@@ -34,7 +34,7 @@ public class MergeMeetingTimes {
         final List<Meeting> merged = new ArrayList<>();
         if (meetings == null || meetings.isEmpty()) return meetings;
 
-        Collections.sort(meetings, Comparator.comparingInt(a -> a.start));
+        meetings.sort(Comparator.comparingInt(a -> a.start));
 
         merged.add(meetings.get(0));
         for (Meeting meeting : meetings) {

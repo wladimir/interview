@@ -1,4 +1,4 @@
-package hashing;
+package interviewcake.hashing;
 
 import junit.framework.TestCase;
 

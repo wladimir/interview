@@ -1,6 +1,5 @@
-package interview_cake.hashing;
+package interviewcake.hashing;
 
-import hashing.InFlightEntertainment;
 import junit.framework.TestCase;
 
 public class InFlightEntertainmentTest extends TestCase {

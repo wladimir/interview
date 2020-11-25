@@ -1,4 +1,4 @@
-package interview_cake.array_and_string_manipulation;
+package interviewcake.array_and_string;
 
 /**
  * Problem:

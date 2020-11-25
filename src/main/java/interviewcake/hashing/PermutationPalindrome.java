@@ -1,4 +1,4 @@
-package hashing;
+package interviewcake.hashing;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -23,15 +23,15 @@ import java.util.Set;
  * Cost:
  * - O(n) time, O(n) space.
  */
-public class InFlightEntertainment {
-    public boolean fillFlight(final int[] movies, int flight) {
-        final Set<Integer> seen = new HashSet<>();
+public class PermutationPalindrome {
+    public boolean hasPalindromePermutation(final String input) {
+        final Set<Character> unpaired = new HashSet<>();
 
-        for (int movie : movies) {
-            if (seen.contains(flight - movie)) return true;
-            seen.add(movie);
+        for (Character c : input.toCharArray()) {
+            if (unpaired.contains(c)) unpaired.remove(c);
+            else unpaired.add(c);
         }
 
-        return false;
+        return unpaired.size() <= 1;
     }
 }
