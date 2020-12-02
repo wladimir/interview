@@ -1,5 +1,7 @@
 package interviewcake.trees_and_graphs;
 
+import common.BinaryTree;
+
 /**
  * Problem:
  * - Given a binary search tree, find the 2nd largest item.
@@ -16,4 +18,29 @@ package interviewcake.trees_and_graphs;
  * - If the tree is balanced, the time complexity is (Olgn). Otherwise, it's O(n).
  */
 public class SecondLargestItem {
+    public int findLargest(final BinaryTree node) {
+        BinaryTree current = node;
+
+        while (current.right != null) current = current.right;
+
+        return current.value;
+    }
+
+    public int findSecondLargest(BinaryTree node) {
+        if (node == null || (node.left == null && node.right == null)) return -1;
+
+        BinaryTree current = node;
+
+        while (true) {
+            // current is largest
+            if (current.left != null && current.right == null) return findLargest(current.left);
+
+            // parent of child-less largest
+            if (current.right != null && current.right.left == null && current.right.right == null)
+                return current.value;
+
+            // step right
+            current = current.right;
+        }
+    }
 }
