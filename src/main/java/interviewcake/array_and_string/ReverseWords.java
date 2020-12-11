@@ -18,7 +18,7 @@ package interviewcake.array_and_string;
  * - Iterate through the list again the reverse its characters by first keeping
  * track of the start index for each word since they are separated by an empty
  * string.
- * - Once we fine an empty string, update the start word index and use the same
+ * - Once we find an empty string, update the start word index and use the same
  * idea to reverse the characters order.
  * Cost:
  * - O(n) time, O(1) space.
