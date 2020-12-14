@@ -12,4 +12,15 @@ public class LinkedListNode {
     public LinkedListNode(int value) {
         this.value = value;
     }
+
+    public static LinkedListNode[] valuesToLinkedListNodes(int[] values) {
+        final LinkedListNode[] nodes = new LinkedListNode[values.length];
+        for (int i = 0; i < values.length; ++i) {
+            nodes[i] = new LinkedListNode(values[i]);
+            if (i > 0) {
+                nodes[i - 1].next = nodes[i];
+            }
+        }
+        return nodes;
+    }
 }
