@@ -7,4 +7,4 @@ Common algorithmic interview problems in Java from:
 * [The HackerRank Interview Preparation Kit](https://www.hackerrank.com/interview/interview-preparation-kit)
 * [Javascript problems and solutions](https://github.com/jeantimex/javascript-problems-and-solutions)
 
-Heavily inspired by https://github.com/hoanhan101/algo
+Heavily inspired by [116+ Coding Interview Problems with Detailed Solutions](https://github.com/hoanhan101/algo)
