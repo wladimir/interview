@@ -33,7 +33,7 @@ import java.util.List;
  * complexity is O(n). For space complexity, we have to keep track of the all
  * the nodes at every depth. Hence, it is O(n).
  */
-public class BalancedBinaryTree {
+public class SuperBalancedBinaryTree {
     private static class NodeDepthPair {
         final BinaryTree node;
         final int depth;

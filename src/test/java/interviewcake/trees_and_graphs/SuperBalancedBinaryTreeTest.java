@@ -3,7 +3,7 @@ package interviewcake.trees_and_graphs;
 import common.BinaryTree;
 import junit.framework.TestCase;
 
-public class BalancedBinaryTreeTest extends TestCase {
+public class SuperBalancedBinaryTreeTest extends TestCase {
     public void testIsSuperBalanced() {
         final BinaryTree root = new BinaryTree(5);
         final BinaryTree a = root.insertLeft(8);
@@ -12,6 +12,6 @@ public class BalancedBinaryTreeTest extends TestCase {
         a.insertRight(2);
         b.insertLeft(3);
         b.insertRight(4);
-        assertTrue(new BalancedBinaryTree().isSuperBalanced(root));
+        assertTrue(new SuperBalancedBinaryTree().isSuperBalanced(root));
     }
 }
