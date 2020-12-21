@@ -27,7 +27,7 @@ public class MaxSubarray {
 
             if (end >= K - 1) {
                 max = Math.max(max, sum);
-                sum -= arr[end];
+                sum -= arr[start];
                 start++;
             }
         }
