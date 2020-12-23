@@ -1,4 +1,4 @@
-package grokking_the_coding_interview;
+package grokking_the_coding_interview.sliding_window;
 
 /**
  * Problem:
