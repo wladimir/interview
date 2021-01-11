@@ -14,7 +14,42 @@ import common.LinkedListNode;
  * - O(n) time, O(1) space.
  */
 public class PalindromeLinkedList {
-    public boolean isPalindrome(final LinkedListNode head) {
+    public boolean isPalindrome(LinkedListNode head) {
+        if (head == null || head.next == null) return true;
 
+        LinkedListNode slow = head, fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        LinkedListNode revHead = reverse(slow);
+        LinkedListNode revHeadCopy = revHead;
+
+        boolean isPalindrome = true;
+        while (head != null && revHead != null) {
+            if (head.value != revHead.value) {
+                isPalindrome = false;
+                break;
+            }
+            head = head.next;
+            revHead = revHead.next;
+        }
+
+        reverse(revHeadCopy);
+        return isPalindrome;
+    }
+
+    private LinkedListNode reverse(LinkedListNode head) {
+        LinkedListNode prev = null;
+
+        while (head != null) {
+            LinkedListNode next = head.next;
+            head.next = prev;
+            prev = head;
+            head = next;
+        }
+
+        return prev;
     }
 }

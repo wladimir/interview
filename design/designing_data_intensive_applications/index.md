@@ -1,17 +1,6 @@
-Building Microservices:
-low coupling, high cohesion
-Prematurely  decomposing  a  system  into  microservicescan be costly, especially if you are new to the domain. In many ways, having an exist‐ing codebase you want to decompose into microservices is much easier than trying togo to microservices from the beginning
-service boundary: business vs technical slice
-Shared DB is effectively a very large, shared API, also specific technology choice.
-sync vs async (optimistic). style: request/response  or event-based.
-PACT
-blue/green deployment
-Prometheus
-
-
-
 Desiging data-intensive applications:
-twitter, fan-out, hot users hybrid approach
+
+Twitter, fan-out, hot users hybrid approach
 response times as distribution, percentiles
 High percentiles become especially important in backend services that are called mul‐ tiple times as part of serving a single end-user request.
 Even if only a small percentage of backend calls are slow, the chance of getting a slow call increases if an end-user request requires multiple back‐ end calls, and so a higher proportion of end-user requests end up being slow (an effect known as tail latency amplification.

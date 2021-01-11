@@ -1,5 +1,6 @@
 package interviewcake.array_and_string;
 
+import common.Interval;
 import common.Pair;
 import junit.framework.TestCase;
 
@@ -10,37 +11,37 @@ import static java.util.Collections.emptyList;
 
 public class MergeMeetingTimesTest extends TestCase {
     public void test() {
-        final List<Pair<List<MergeMeetingTimes.Meeting>>> pairs = asList(
+        final List<Pair<List<Interval>>> pairs = asList(
                 Pair.of(
                         emptyList(),
                         emptyList()
                 ),
                 Pair.of(
-                        asList(new MergeMeetingTimes.Meeting(1, 2)),
-                        asList(new MergeMeetingTimes.Meeting(1, 2))
+                        asList(new Interval(1, 2)),
+                        asList(new Interval(1, 2))
                 ),
                 Pair.of(
-                        asList(new MergeMeetingTimes.Meeting(1, 2), new MergeMeetingTimes.Meeting(2, 3)),
-                        asList(new MergeMeetingTimes.Meeting(1, 3))
+                        asList(new Interval(1, 2), new Interval(2, 3)),
+                        asList(new Interval(1, 3))
                 ),
                 Pair.of(
-                        asList(new MergeMeetingTimes.Meeting(1, 5), new MergeMeetingTimes.Meeting(2, 3)),
-                        asList(new MergeMeetingTimes.Meeting(1, 5))
+                        asList(new Interval(1, 5), new Interval(2, 3)),
+                        asList(new Interval(1, 5))
                 ),
                 Pair.of(
-                        asList(new MergeMeetingTimes.Meeting(1, 2), new MergeMeetingTimes.Meeting(4, 5)),
-                        asList(new MergeMeetingTimes.Meeting(1, 2), new MergeMeetingTimes.Meeting(4, 5))
+                        asList(new Interval(1, 2), new Interval(4, 5)),
+                        asList(new Interval(1, 2), new Interval(4, 5))
                 ),
                 Pair.of(
-                        asList(new MergeMeetingTimes.Meeting(1, 5), new MergeMeetingTimes.Meeting(2, 3), new MergeMeetingTimes.Meeting(4, 5)),
-                        asList(new MergeMeetingTimes.Meeting(1, 5))
+                        asList(new Interval(1, 5), new Interval(2, 3), new Interval(4, 5)),
+                        asList(new Interval(1, 5))
                 ),
                 Pair.of(
-                        asList(new MergeMeetingTimes.Meeting(1, 2), new MergeMeetingTimes.Meeting(2, 3), new MergeMeetingTimes.Meeting(4, 5)),
-                        asList(new MergeMeetingTimes.Meeting(1, 3), new MergeMeetingTimes.Meeting(4, 5))
+                        asList(new Interval(1, 2), new Interval(2, 3), new Interval(4, 5)),
+                        asList(new Interval(1, 3), new Interval(4, 5))
                 ),
-                Pair.of(asList(new MergeMeetingTimes.Meeting(1, 6), new MergeMeetingTimes.Meeting(2, 3), new MergeMeetingTimes.Meeting(4, 5)),
-                        asList(new MergeMeetingTimes.Meeting(1, 6))
+                Pair.of(asList(new Interval(1, 6), new Interval(2, 3), new Interval(4, 5)),
+                        asList(new Interval(1, 6))
                 )
         );
 
