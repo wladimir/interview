@@ -1,5 +1,11 @@
 package grokking_the_coding_interview.merge_intervals;
 
+import common.Interval;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Problem:
  * - Given a list of non-overlapping intervals sorted by their start time, insert
@@ -16,4 +22,25 @@ package grokking_the_coding_interview.merge_intervals;
  * - O(n) time, O(n) space.
  */
 public class InsertInterval {
+    public List<Interval> insert(final List<Interval> intervals, final Interval newInterval) {
+        if (intervals == null || intervals.isEmpty()) return Collections.singletonList(newInterval);
+
+        final List<Interval> merged = new ArrayList<>();
+
+        int i = 0;
+        while (intervals.get(i).end < newInterval.start && i < intervals.size()) merged.add(intervals.get(i++));
+
+        int start = newInterval.start;
+        int end = newInterval.end;
+        while (intervals.get(i).start <= newInterval.end && i < intervals.size()) {
+            start = Math.min(intervals.get(i).start, start);
+            end = Math.max(intervals.get(i).end, end);
+            i++;
+        }
+        merged.add(new Interval(start, end));
+
+        while (i < intervals.size()) merged.add(intervals.get(i++));
+
+        return merged;
+    }
 }
