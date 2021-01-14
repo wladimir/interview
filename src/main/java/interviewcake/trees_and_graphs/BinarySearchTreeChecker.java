@@ -1,6 +1,6 @@
 package interviewcake.trees_and_graphs;
 
-import common.BinaryTree;
+import common.BinaryTreeNode;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -34,18 +34,18 @@ import java.util.Deque;
  */
 public class BinarySearchTreeChecker {
     private static class NodeBounds {
-        BinaryTree node;
+        BinaryTreeNode node;
         int lowerBound;
         int upperBound;
 
-        NodeBounds(BinaryTree node, int lowerBound, int upperBound) {
+        NodeBounds(BinaryTreeNode node, int lowerBound, int upperBound) {
             this.node = node;
             this.lowerBound = lowerBound;
             this.upperBound = upperBound;
         }
     }
 
-    public boolean isBinarySearchTree(BinaryTree root) {
+    public boolean isBinarySearchTree(BinaryTreeNode root) {
         if (root == null) return true;
 
         final Deque<NodeBounds> stack = new ArrayDeque<>();

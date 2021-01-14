@@ -1,6 +1,6 @@
 package interviewcake.trees_and_graphs;
 
-import common.BinaryTree;
+import common.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.Deque;
@@ -35,16 +35,16 @@ import java.util.List;
  */
 public class SuperBalancedBinaryTree {
     private static class NodeDepthPair {
-        final BinaryTree node;
+        final BinaryTreeNode node;
         final int depth;
 
-        NodeDepthPair(BinaryTree node, int depth) {
+        NodeDepthPair(BinaryTreeNode node, int depth) {
             this.node = node;
             this.depth = depth;
         }
     }
 
-    public boolean isSuperBalanced(final BinaryTree root) {
+    public boolean isSuperBalanced(final BinaryTreeNode root) {
         if (root == null) return true;
 
         List<Integer> depths = new ArrayList<>();

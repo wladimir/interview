@@ -1,6 +1,6 @@
 package interviewcake.trees_and_graphs;
 
-import common.BinaryTree;
+import common.BinaryTreeNode;
 
 /**
  * Problem:
@@ -18,18 +18,18 @@ import common.BinaryTree;
  * - If the tree is balanced, the time complexity is (Olgn). Otherwise, it's O(n).
  */
 public class SecondLargestItem {
-    public int findLargest(final BinaryTree node) {
-        BinaryTree current = node;
+    public int findLargest(final BinaryTreeNode node) {
+        BinaryTreeNode current = node;
 
         while (current.right != null) current = current.right;
 
         return current.value;
     }
 
-    public int findSecondLargest(BinaryTree node) {
+    public int findSecondLargest(BinaryTreeNode node) {
         if (node == null || (node.left == null && node.right == null)) return -1;
 
-        BinaryTree current = node;
+        BinaryTreeNode current = node;
 
         while (true) {
             // current is largest

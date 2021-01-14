@@ -1,6 +1,6 @@
 package leetcode.trees;
 
-import common.BinaryTree;
+import common.BinaryTreeNode;
 
 /**
  * Problem:
@@ -12,11 +12,11 @@ import common.BinaryTree;
  * - O(n) time, O(n) stack space.
  */
 public class BalancedBinaryTree {
-    public boolean isBalanced(final BinaryTree root) {
+    public boolean isBalanced(final BinaryTreeNode root) {
         return maxDepth(root) != -1;
     }
 
-    private int maxDepth(final BinaryTree root) {
+    private int maxDepth(final BinaryTreeNode root) {
         if (root == null) return 0;
 
         int maxLeft = maxDepth(root.left);

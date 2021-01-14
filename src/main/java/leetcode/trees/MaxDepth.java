@@ -1,6 +1,6 @@
 package leetcode.trees;
 
-import common.BinaryTree;
+import common.BinaryTreeNode;
 
 /**
  * Problem:
@@ -12,7 +12,7 @@ import common.BinaryTree;
  * - O(n) time, O(n) space.
  */
 public class MaxDepth {
-    public int maxDepth(BinaryTree root) {
+    public int maxDepth(BinaryTreeNode root) {
         if (root == null) {
             return 0;
         }

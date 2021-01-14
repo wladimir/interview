@@ -1,6 +1,6 @@
 package leetcode.trees;
 
-import common.BinaryTree;
+import common.BinaryTreeNode;
 
 /**
  * Problem:
@@ -15,11 +15,11 @@ import common.BinaryTree;
  * - O(n) time and O(n) stack space.
  */
 public class ValidateBinarySearchTree {
-    public boolean isValidBST(BinaryTree root) {
+    public boolean isValidBST(BinaryTreeNode root) {
         return isValidBSTRec(root, null, null);
     }
 
-    private boolean isValidBSTRec(BinaryTree root, Integer min, Integer max) {
+    private boolean isValidBSTRec(BinaryTreeNode root, Integer min, Integer max) {
         if (root == null) return true;
 
         if ((min != null && min > root.value) || (max != null && max < root.value)) return false;

@@ -1,6 +1,6 @@
 package leetcode.trees;
 
-import common.BinaryTree;
+import common.BinaryTreeNode;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -15,7 +15,7 @@ import java.util.Deque;
  * - O(n) time, O(n) space.
  */
 public class MinDepth {
-    public int minDepthRec(BinaryTree root) {
+    public int minDepthRec(BinaryTreeNode root) {
         if (root == null) return 0;
 
         if (root.left == null) return minDepthRec(root.right) + 1;
@@ -24,16 +24,16 @@ public class MinDepth {
         return Math.min(minDepthRec(root.left), minDepthRec(root.right)) + 1;
     }
 
-    public int minDepthIt(BinaryTree root) {
+    public int minDepthIt(BinaryTreeNode root) {
         if (root == null) return 0;
 
         int depth = 1;
-        final Deque<BinaryTree> deque = new ArrayDeque<>();
+        final Deque<BinaryTreeNode> deque = new ArrayDeque<>();
         deque.offer(root);
         while (!deque.isEmpty()) {
             int size = deque.size();
             for (int i = 0; i < size; i++) {
-                final BinaryTree node = deque.poll();
+                final BinaryTreeNode node = deque.poll();
 
                 if (node.left == null && node.right == null) return depth;
 
