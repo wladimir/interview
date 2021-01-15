@@ -5,7 +5,7 @@ import junit.framework.TestCase;
 public class FindDuplicateNumberTest extends TestCase {
     public void testFindNumber() {
         assertEquals(
-                1,
+                4,
                 new FindDuplicateNumber().findNumber(new int[]{1, 4, 4, 3, 2})
         );
     }

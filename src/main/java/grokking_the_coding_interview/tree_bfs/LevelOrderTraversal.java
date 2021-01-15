@@ -2,10 +2,10 @@ package grokking_the_coding_interview.tree_bfs;
 
 import common.BinaryTreeNode;
 
-import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 /**
  * Problem:
@@ -37,9 +37,9 @@ public class LevelOrderTraversal {
         final List<List<Integer>> result = new ArrayList<>();
         if (root == null) return result;
 
-        final Deque<BinaryTreeNode> queue = new ArrayDeque<>();
-        // or
-        // final Queue<BinaryTreeNode> queue = new LinkedList<>();
+        // usable, but don't need deque
+        // final Deque<BinaryTreeNode> queue = new ArrayDeque<>();
+        final Queue<BinaryTreeNode> queue = new LinkedList<>();
         queue.offer(root);
 
         while (!queue.isEmpty()) {

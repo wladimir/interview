@@ -2,10 +2,10 @@ package grokking_the_coding_interview.tree_bfs;
 
 import common.BinaryTreeNode;
 
-import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 /*
 Problem:
@@ -16,7 +16,7 @@ Example:
       1
 	2   3
   4       5
-  Output: []float64{1, 2.5, 4.5}
+  Output: []double{1, 2.5, 4.5}
 Approach:
 - Similar to level order traversal problem, except we keep track of the sum
   at each level and return the average in the end.
@@ -28,7 +28,7 @@ public class LevelAverages {
         final List<Double> averages = new ArrayList<>();
         if (root == null) return averages;
 
-        final Deque<BinaryTreeNode> queue = new ArrayDeque<>();
+        final Queue<BinaryTreeNode> queue = new LinkedList<>();
         queue.offer(root);
 
         while (!queue.isEmpty()) {
