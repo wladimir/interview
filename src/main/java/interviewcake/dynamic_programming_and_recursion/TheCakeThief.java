@@ -6,7 +6,7 @@ package interviewcake.dynamic_programming_and_recursion;
  * and returns the maximum monetary value the duffel bag can hold.
  * Also known as the unbounded knapsack problem.
  * Approach:
- * We use a bottom-up ↴ approach to find the max value at our duffel bag's weightCapacity
+ * We use a bottom-up approach to find the max value at our duffel bag's weightCapacity
  * by finding the max value at every capacity from 0 to weightCapacity.
  * Cost:
  * O(n*k) time, and O(k) space, where n is number of types of cake and k is the capacity of the duffel bag.
