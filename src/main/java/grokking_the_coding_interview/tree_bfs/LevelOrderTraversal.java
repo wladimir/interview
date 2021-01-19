@@ -37,7 +37,7 @@ public class LevelOrderTraversal {
         final List<List<Integer>> result = new ArrayList<>();
         if (root == null) return result;
 
-        // usable, but don't need deque
+        // usable, don't need deque, but is more performant in general case
         // final Deque<BinaryTreeNode> queue = new ArrayDeque<>();
         final Queue<BinaryTreeNode> queue = new LinkedList<>();
         queue.offer(root);
