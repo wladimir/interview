@@ -1,4 +1,4 @@
-package freecodecamp.dynamic_programming;
+package freecodecamp.dynamic_programming.memoization;
 
 import java.util.HashMap;
 import java.util.Map;
