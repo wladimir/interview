@@ -7,3 +7,7 @@ Common algorithmic interview problems in Java from:
 * [Javascript problems and solutions](https://github.com/jeantimex/javascript-problems-and-solutions)
 
 Heavily inspired by [116+ Coding Interview Problems with Detailed Solutions](https://github.com/hoanhan101/algo)
+
+Addendum:
+* [System design notes](design)
+* [Designing a GraphQL API](https://github.com/Shopify/graphql-design-tutorial/blob/master/TUTORIAL.md)
