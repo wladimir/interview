@@ -1,34 +1,53 @@
 package jeantimex.data_structures;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Implement a trie with insert, search, and startsWith methods.
- *
- * Note:
- * You may assume that all inputs are consist of lowercase letters a-z.
- *
- * The following picture explains construction of trie using keys given in the example below,
- *
- *                        root
- *                     /   \    \
- *                     t   a     b
- *                     |   |     |
- *                     h   n     y
- *                     |   |  \  |
- *                     e   s  y  e
- *                  /  |   |
- *                  i  r   w
- *                  |  |   |
- *                  r  e   e
- *                         |
- *                         r
- *
- * Trie is an efficient information reTrieval data structure. Using Trie,
- * search complexities can be brought to optimal limit (key length).
- *
- * If we store keys in binary search tree, a well balanced BST will need time proportional to M * log N,
- * where M is maximum string length and N is number of keys in tree. Using Trie, we can search the key in O(M) time.
- *
- * However the penalty is on Trie storage requirements.
  */
 public class Trie {
+    public static class TrieNode {
+        public Map<Character, TrieNode> children = new HashMap<>();
+        public boolean end;
+    }
+
+    private TrieNode root;
+
+    public Trie() {
+        root = new TrieNode();
+    }
+
+    public void insert(final String word) {
+        TrieNode current = root;
+
+        for (final char c : word.toCharArray())
+            current = current.children.computeIfAbsent(c, k -> new TrieNode());
+
+        current.end = true;
+    }
+
+    public boolean search(final String word) {
+        TrieNode current = root;
+
+        for (final char c : word.toCharArray()) {
+            TrieNode node = current.children.get(c);
+            if (node == null) return false;
+            current = node;
+        }
+
+        return current.end;
+    }
+
+    public boolean startsWith(final String prefix) {
+        TrieNode current = root;
+
+        for (final char c : prefix.toCharArray()) {
+            TrieNode node = current.children.get(c);
+            if (node == null) return false;
+            current = node;
+        }
+
+        return true;
+    }
 }
