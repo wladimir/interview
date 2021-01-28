@@ -25,11 +25,9 @@ public class TwoSum {
     public int[] twoSum(int[] nums, int target) {
         final Map<Integer, Integer> cache = new HashMap<>();
 
-        for (int i = 0; i < nums.length; i++) cache.put(nums[i], i);
-
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; cache.put(nums[i], i), i++) {
             int toFind = target - nums[i];
-            if (cache.containsKey(toFind) && i != cache.get(toFind)) return new int[]{i, cache.get(toFind)};
+            if (cache.containsKey(toFind)) return new int[]{cache.get(toFind), i};
         }
 
         throw new IllegalArgumentException("No two sum solution");
