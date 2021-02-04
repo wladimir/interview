@@ -4,14 +4,15 @@ import common.LinkedListNode;
 
 /**
  * Problem:
- * - Given two linked lists representing two non-negative number, add them together
+ * - Given two linked lists representing two non-negative numbers, add them together
  * and return it as a linked list.
  * Assumption:
  * - The digits are stored in reverse order.
  * - Each node contains a single digit.
  * Example:
- * - Input: (1 -> 6 -> 4) + (2 -> 4-> 1)
- * Output: (3 -> 0 -> 6)
+ * - Input: (1 -> 6 -> 4) +
+ * <p>      (2 -> 6 -> 1)</p
+ * Output:  (3 -> 2 -> 6)
  * Approach:
  * - Traverse both lists and keep track of the sum and carry for each
  * digit.

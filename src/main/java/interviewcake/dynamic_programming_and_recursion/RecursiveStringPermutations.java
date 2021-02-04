@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-/*(
+/**
 Problem:
 - Write a recursive function for generating all permutations of an input
   string. Assume that every character in the string is unique.

@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Problem:
  * - Given a binary tree, determine if it is "superbalanced" - the difference
- * between the depths of any two leaf nodes is no greater than 1.
+ * between the depths of any two leaf nodes is not greater than 1.
  * Approach:
  * - Use a depth-first walk through the tree and keep track of the depth as we
  * go.

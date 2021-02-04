@@ -5,23 +5,27 @@ import java.util.Set;
 
 /**
  * Problem:
- * - Given a list of movie lengths (integer) and a flight length (integer), determine if
- * there exist two movies that add up to the total length. Assume that an user
- * watch exactly two movies, but not the same one twice.
+ * - Given a string, check if its permutation is a palindrome.
  * Example:
- * - Input: list=[]int{2, 3, 4}, length=6
- * Output: true, because there exists 2 and 4 that add up to 6
+ * - Input: "ivicc"
+ * Output: true
+ * - Input: "civic"
+ * Output: true
  * Approach:
- * - Could use hashmap to keep track of movie lengths that we've seen so far and
- * look it up as we iterate through the list.
+ * - To determine if a permutation is a palindrome, need to check if each
+ * character in the string appears an even number of times, allowing for
+ * only one character to appear an odd time, that is the middle one.
+ * - Could use a hashmap store the characters and their number of occurrences.
  * Solution:
- * - Use a hashmap to keep track of movie lengths that we've seen so far.
- * - As we iterate through the list, we calculate the difference for each value
- * (total length - current movie length) and check if the difference is equal
- * to the movie length that we've seen.
- * - Return true if that's the case.
+ * - As we iterate through the string, use a hashmap to add a character if
+ * we haven't seen it and remove it if it's already there.
+ * - After the iteration, if we're left with less or equal than 1 character in
+ * the map, we have a palindrome.
  * Cost:
- * - O(n) time, O(n) space.
+ * - O(n) time, O(1) space.
+ * - The space complexity is O(n) due to the hashmap, but since there are
+ * only a constant number of characters in Unicode, we could treat it
+ * as O(1).
  */
 public class PermutationPalindrome {
     public boolean hasPalindromePermutation(final String input) {

@@ -20,7 +20,7 @@ package interviewcake.sorting_searching_and_logarithms;
  * },
  * Output: 5
  * Approach:
- * - Use a binary search approach to search for word, to either go right or go
+ * - Use a binary search approach to search for first word, to either go right or go
  * left because they are in order alphabetically.
  * - Keep track of the lower and upper bounds and so that when they are next
  * to each other, the floor is the last item while the ceiling is the rotation
