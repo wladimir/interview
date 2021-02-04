@@ -28,11 +28,11 @@ public class InsertInterval {
         final List<Interval> merged = new ArrayList<>();
 
         int i = 0;
-        while (intervals.get(i).end < newInterval.start && i < intervals.size()) merged.add(intervals.get(i++));
+        while (intervals.get(i).end < newInterval.start) merged.add(intervals.get(i++));
 
         int start = newInterval.start;
         int end = newInterval.end;
-        while (intervals.get(i).start <= newInterval.end && i < intervals.size()) {
+        while (intervals.get(i).start <= newInterval.end) {
             start = Math.min(intervals.get(i).start, start);
             end = Math.max(intervals.get(i).end, end);
             i++;

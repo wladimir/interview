@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * Problem:
- * - Given an array of sorted numbers, remove all duplicates from it. You should not use any extra space..
+ * - Given an array of sorted numbers, remove all duplicates from it. You should not use any extra space.
  * Example:
  * - Input: []int{2, 3, 3, 3, 6, 9, 9}
  * Output: 4
